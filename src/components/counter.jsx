@@ -8,10 +8,14 @@ class Counter extends Component {
   render() {
     return (
       <React.Fragment>
-        <h1>World!</h1>
-        <button>Increment</button>
+        <span className="badge badge-primary m-2">{this.formatCount()}</span>
+        <button className="btn btn-secondary btn=sm">Increment</button>
       </React.Fragment>
     );
+  }
+
+  formatCount() {
+    return this.state.counter === 0 ? "Zero" : this.state.counter;
   }
 }
 
